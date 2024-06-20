@@ -1,6 +1,8 @@
-# Backend server for windows form app 
+---
 
-This is a simple Node.js API for managing submissions, built using Express. The API supports creating, reading, updating, and deleting submissions stored in a JSON file.
+# Backend Server for Windows Form App
+
+This is a simple Node.js API for managing submissions, built using Express and TypeScript . The API supports creating, reading, updating, deleting, and searching submissions stored in a JSON file.
 
 ## Prerequisites
 
@@ -104,6 +106,31 @@ Follow these instructions to set up and run the server on your local machine.
 - **Parameters:** `id` - ID of the submission to delete.
 - **Response:** Success message or error message if not found.
 
+### Search Submissions by Email
+
+- **Endpoint:** `/search`
+- **Method:** `GET`
+- **Description:** Search submissions by email.
+- **Query Parameters:** `email` - Email address to search for.
+- **Response:** Array of submission objects matching the email or an empty array if no matches are found.
+- **Example:**
+  ```bash
+  GET http://localhost:3000/search?email=john.doe@example.com
+  ```
+  **Response:**
+  ```json
+  [
+      {
+          "id": "1",
+          "name": "John Doe",
+          "email": "john.doe@example.com",
+          "phone": "1234567890",
+          "github_link": "https://github.com/johndoe",
+          "stopwatch_time": "00:10:15"
+      }
+  ]
+  ```
+
 ## Error Handling
 
 Each endpoint returns appropriate error messages and status codes in case of failure. Common errors include:
@@ -111,5 +138,6 @@ Each endpoint returns appropriate error messages and status codes in case of fai
 - `500 Internal Server Error`: Issues with reading or writing to the JSON file.
 - `404 Not Found`: Submission not found for the provided index or ID.
 
-
 Feel free to reach out if you have any questions or need further assistance!
+
+---
