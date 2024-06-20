@@ -16,8 +16,8 @@ Follow these instructions to set up and run the server on your local machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/VPAVAN11/Slidely_task2_backend.git
+   cd Slidely_task2_backend
    ```
 
 2. **Install dependencies:**
