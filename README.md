@@ -1,4 +1,4 @@
-# Submission Management API
+# Backend server for windows form app 
 
 This is a simple Node.js API for managing submissions, built using Express. The API supports creating, reading, updating, and deleting submissions stored in a JSON file.
 
@@ -111,5 +111,6 @@ Each endpoint returns appropriate error messages and status codes in case of fai
 - `500 Internal Server Error`: Issues with reading or writing to the JSON file.
 - `404 Not Found`: Submission not found for the provided index or ID.
 
+![image](https://github.com/VPAVAN11/Slidely_task2_backend/assets/103198643/cf5ffc10-1a4d-4d20-bbb2-4a8b0ee9de9b)
 
 Feel free to reach out if you have any questions or need further assistance!
