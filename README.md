@@ -111,10 +111,5 @@ Each endpoint returns appropriate error messages and status codes in case of fai
 - `500 Internal Server Error`: Issues with reading or writing to the JSON file.
 - `404 Not Found`: Submission not found for the provided index or ID.
 
-## License
-
-This project is licensed under the MIT License.
-
----
 
 Feel free to reach out if you have any questions or need further assistance!
