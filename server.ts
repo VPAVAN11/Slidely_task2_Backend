@@ -124,6 +124,26 @@ app.delete('/delete/:id', (req: Request, res: Response) => {
     }
 });
 
+
+// Endpoint to search form data by email
+app.get('/search', (req: Request, res: Response) => {
+    const email = req.query.email as string;
+
+    try {
+        const submissions: Submission[] = JSON.parse(fs.readFileSync(dbFilePath, 'utf-8'));
+        console.log('Searching for email:', email); // Debugging line
+        const results = submissions.filter(submission => submission.email.toLowerCase() === email.toLowerCase());
+        console.log('Search results:', results); // Debugging line
+        res.json(results);
+    } catch (error) {
+        console.error('Error searching submissions:', error);
+        res.status(500).json({ error: 'Failed to search submissions.' });
+    }
+});
+
+
+
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
